@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnswerDBApp.Views.BienvenidaPage"
+             Shell.NavBarIsVisible="False"
+             Title="AnswerApp"
+             NavigationPage.HasNavigationBar="True">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorSecondaryButton">#40E0D0</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,50,10,50">
+                <FlexLayout Direction="Column">
+                    <StackLayout Padding="10,50,10,0" VerticalOptions="StartAndExpand">
+                        <Label x:Name="labelWelcome" Text="Bienvenido (a)" VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="20" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    <StackLayout Padding="10,100,10,0" VerticalOptions="Center">
+                        <Button x:Name="BtnEnter" VerticalOptions="Center" Text="Ingresar" BackgroundColor="Green" TextColor="White" Clicked="BtnEnter_Clicked"/>
+                        <Button x:Name="BtnVerPreguntas" VerticalOptions="Center" Text="Ver Preguntas" BackgroundColor="{StaticResource ColorSecondaryButton}" TextColor="White" Clicked="BtnVerPreguntas_Clicked"/>
+                        <Button x:Name="BtnExit" VerticalOptions="Center" Text="Salir"  BackgroundColor="Red" TextColor="White" Clicked="BtnExit_Clicked"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
